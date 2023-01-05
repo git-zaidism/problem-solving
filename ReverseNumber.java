@@ -12,8 +12,9 @@ public class ReverseNumber {
     private static int reverse(int num) {
         int reversedNum = 0;
         while (num != 0) {
-            reversedNum = reversedNum * 10 + num % 10;
-            num /= 10;
+            int lastDigit =  num % 10;
+            reversedNum = reversedNum*10 + lastDigit;
+            num = num/10;
         }
         return reversedNum;
     }
